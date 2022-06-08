@@ -1,0 +1,22 @@
+<%= form_with(model: cenologist) do |form| %>
+  <% if cenologist.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(cenologist.errors.count, "error") %> prohibited this cenologist from being saved:</h2>
+
+      <ul>
+        <% cenologist.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

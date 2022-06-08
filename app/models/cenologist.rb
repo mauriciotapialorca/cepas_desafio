@@ -1,0 +1,2 @@
+class Cenologist < ApplicationRecord
+end

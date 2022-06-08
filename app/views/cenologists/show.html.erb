@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @cenologist %>
+
+<div>
+  <%= link_to "Edit this cenologist", edit_cenologist_path(@cenologist) %> |
+  <%= link_to "Back to cenologists", cenologists_path %>
+
+  <%= button_to "Destroy this cenologist", @cenologist, method: :delete %>
+</div>

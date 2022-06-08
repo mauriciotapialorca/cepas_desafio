@@ -1,0 +1,22 @@
+<%= form_with(model: jobstittle) do |form| %>
+  <% if jobstittle.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(jobstittle.errors.count, "error") %> prohibited this jobstittle from being saved:</h2>
+
+      <ul>
+        <% jobstittle.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :job_tittle, style: "display: block" %>
+    <%= form.text_field :job_tittle %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

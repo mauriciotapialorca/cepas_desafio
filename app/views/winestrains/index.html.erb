@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Winestrains</h1>
+
+<div id="winestrains">
+  <% @winestrains.each do |winestrain| %>
+    <%= render winestrain %>
+    <p>
+      <%= link_to "Show this winestrain", winestrain %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New winestrain", new_winestrain_path %>
